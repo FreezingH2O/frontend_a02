@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking form</title>
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Package booking form</h1>
+        <div class ="student-id">6733297421 | Airada Jitareeruk</div>
+    </header>
+
+
+    <div class="container">
+        <form id="bookingForm">
+
+            <label for="tourPackage">Tour Package:</label>
+            <select name ="tourPackage"  id="tourPackage" required>
+                <option value="">Select</option>
+                <option value="japan">Classic Japan Tour</option>
+                <option value="kenya">Kenya Safari</option>
+                <option value="europ">European Rhapsody</option>
+            </select>
+
+            <label for="tourGroup">Tour Group Type:</label>
+            <select name="tourGroup" id="tourGroup" required>
+                <option value="">Select</option>
+                <option value="small">Small Group (10-15 people)</option>
+                <option value="standard">Standard Group (35-40 people)</option>
+            </select>
+            
+           
+            <label for="joinLand">Do you want to buy your own ticket? (Join Land)</label>
+            <input type="checkbox" id="joinLand">
+        
+            
+            
+            <label for="numTravelers">Number of Travelers:</label>
+            <input type="number" id="numTravelers" min="1" max="15" required>
+            
+            <label for="contactName">Contact Person:</label>
+            <input type="text" id="contactName" required>
+    
+            <label for="contactPhone">Contact Phone:</label>
+            <input type="tel" id="contactPhone" pattern="[0-9]{10}" placeholder="Enter phone number" required>
+    
+            <button  onclick="summit()" class="btn">Submit Booking</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
